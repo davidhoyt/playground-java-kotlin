@@ -1,7 +1,6 @@
 package playground;
 
 import java.util.HashMap;
-import static playground.Utils.*;
 
 //https://leetcode.com/problems/two-sum/description/
 
@@ -34,8 +33,8 @@ public class TwoSum {
     }
 
     public void run() {
-        printIntArray(twoSum(new int[] { -1,-2,-3,-4,-5 }, -8));
-        printIntArray(twoSum(new int[] { 3,2,4 }, 6));
+        Utils.print(twoSum(new int[] { -1,-2,-3,-4,-5 }, -8));
+        Utils.print(twoSum(new int[] { 3,2,4 }, 6));
     }
 
     public static void main(String[] args) {

@@ -43,9 +43,9 @@ public class RemoveNthNodeFromEndOfList {
     }
 
     public void run() {
-        printListNode(removeNthFromEnd(ListNode.create(1, 2), 2));
-        printListNode(removeNthFromEnd(ListNode.create(1, 2, 3), 2));
-        printListNode(removeNthFromEnd(ListNode.create(1, 2, 3, 4, 5), 2));
+        Utils.print(removeNthFromEnd(ListNode.create(1, 2), 2));
+        Utils.print(removeNthFromEnd(ListNode.create(1, 2, 3), 2));
+        Utils.print(removeNthFromEnd(ListNode.create(1, 2, 3, 4, 5), 2));
     }
 
     public static void main(String[] args) {

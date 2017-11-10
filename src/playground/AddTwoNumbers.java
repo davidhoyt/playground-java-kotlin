@@ -39,11 +39,11 @@ public class AddTwoNumbers {
 
     public void run() {
         // WRONG
-        printListNode(addTwoNumbers(ListNode.create(1), ListNode.create(9, 9)));
-        printListNode(addTwoNumbers(ListNode.create(5), ListNode.create(5)));
-        printListNode(addTwoNumbers(ListNode.create(0), ListNode.create(0)));
-        printListNode(addTwoNumbers(ListNode.create(2, 4, 3), ListNode.create(5, 6)));
-        printListNode(addTwoNumbers(ListNode.create(2, 4, 3), ListNode.create(5, 6, 4)));
+        Utils.print(addTwoNumbers(ListNode.create(1), ListNode.create(9, 9)));
+        Utils.print(addTwoNumbers(ListNode.create(5), ListNode.create(5)));
+        Utils.print(addTwoNumbers(ListNode.create(0), ListNode.create(0)));
+        Utils.print(addTwoNumbers(ListNode.create(2, 4, 3), ListNode.create(5, 6)));
+        Utils.print(addTwoNumbers(ListNode.create(2, 4, 3), ListNode.create(5, 6, 4)));
     }
 
     public static void main(String[] args) {
