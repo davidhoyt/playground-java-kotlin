@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ScalaSbtSettings">
-    <option name="maximumHeapSize" value="2048" />
-    <option name="vmParameters" value="-XX:MaxMetaspaceSize=400m -XX:ReservedCodeCacheSize=300m -XX:MetaspaceSize=512m -XX:+DoEscapeAnalysis -XX:+UnlockExperimentalVMOptions -XX:LargePageSizeInBytes=256m -XX:ReservedCodeCacheSize=96m -XX:+UseCodeCacheFlushing -XX:ParallelGCThreads=3 -XX:+DisableExplicitGC -XX:+ExplicitGCInvokesConcurrent -XX:+AggressiveOpts -XX:+CMSClassUnloadingEnabled -XX:CMSInitiatingOccupancyFraction=60 -XX:+CMSClassUnloadingEnabled -XX:+CMSParallelRemarkEnabled -XX:+UseAdaptiveGCBoundary -XX:CompileThreshold=10000 -XX:+OptimizeStringConcat -XX:+UseFastAccessorMethods -XX:+UnlockDiagnosticVMOptions -XX:+UseCompressedOops" />
-  </component>
-</project>

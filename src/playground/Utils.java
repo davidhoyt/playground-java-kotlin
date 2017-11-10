@@ -2,8 +2,8 @@ package playground;
 
 public class Utils {
   public static class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
   
     ListNode(int x) {
       val = x;
@@ -30,9 +30,9 @@ public class Utils {
   }
 
   public static class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
 
     TreeNode(int val, TreeNode left, TreeNode right) {
       this.val = val;
@@ -102,6 +102,55 @@ public class Utils {
       return true;
     }
   }
+
+  public static class TrieNode {
+        public TrieNode[] children = new TrieNode[26]; // Size of English alphabet.
+        public boolean word = false;
+
+        public static void insert(TrieNode node, String word) {
+            if (node == null)
+                return;
+
+            if (word.isEmpty()) {
+                node.word = true;
+            } else {
+                char c = word.charAt(0);
+                int index = c - 'a';
+                if (node.children[index] == null)
+                    node.children[index] = new TrieNode();
+                insert(node.children[index], word.substring(1));
+            }
+        }
+
+        public static void printAll(TrieNode node) {
+            print("[ ");
+            printAllRec(node, "");
+            println("]");
+        }
+
+        private static void printAllRec(TrieNode node, String soFar) {
+            if (node.word) {
+                print(soFar);
+                print(", ");
+            }
+
+            for (int i = 0; i < node.children.length; ++i) {
+                if (node.children[i] != null) {
+                    printAllRec(node.children[i], soFar + (char)(('a' + i)));
+                }
+            }
+        }
+
+        public static TrieNode create() {
+            return new TrieNode();
+        }
+
+        public static TrieNode create(String word) {
+            TrieNode root = create();
+            insert(root, word);
+            return root;
+        }
+    }
  
   public static void print(String s) {
     System.out.print(s);
@@ -310,5 +359,9 @@ public class Utils {
       }
     }
     println("");
+  }
+
+  public static void print(TrieNode node) {
+    TrieNode.printAll(node);
   }
 }
